@@ -1,0 +1,137 @@
+@import "colors";
+@import "mixins";
+
+body {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px 0 18px;
+  color: $hx_color;
+  text-align: left;
+  font-weight: normal;
+  font-family: inherit;
+  font-family: "museo-slab", Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5em;
+  text-rendering: optimizelegibility;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 2.25em;
+  /* 36 */
+
+  font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.250em;
+}
+
+.primary-h1-2 {
+  font-size: 1.625em;
+  /* 26 */
+
+}
+
+h2 {
+  font-size: 1.5em;
+  /* 24 */
+
+}
+
+h3 {
+  font-size: 1.250em;
+  /* 20 */
+
+  padding-bottom: 6px;
+  border-bottom: 1px dotted $h3_border_bottom;
+}
+
+h4 {
+  font-size: 1.125em;
+  /* 18 */
+
+  font-weight: bold;
+  line-height: 1em;
+}
+
+p {
+  margin: 0 0 18px 0;
+}
+
+.big {
+  font-size: 2em;
+  line-height: 1.333em;
+}
+
+p,
+li,
+dt,
+dd {
+  line-height: 1.5em;
+}
+
+li,
+dt,
+dd {
+  font-size: 1em;
+}
+
+small {
+  color: $small_color;
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+a {
+  color: $a_color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $a_hover;
+}
+
+p a {
+  cursor: pointer;
+}
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 0 0 0 15px;
+  border-left: 5px solid $blockquote_border_color;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+blockquote small {
+  display: block;
+  color: $blockquote_small_color;
+  line-height: 20px;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+}

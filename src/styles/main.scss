@@ -1,0 +1,17 @@
+@import "nav";
+@import "footer";
+@import "typography";
+
+body {
+  background: none repeat scroll 0 0 $body_bg;
+  color: $body_color;
+  font-size: 16px;
+  font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+}
+
+.app {
+  min-height: 400px;
+  background-color: $white;
+  padding: 5px;
+}

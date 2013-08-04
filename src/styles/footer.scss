@@ -1,0 +1,12 @@
+@import "colors";
+@import "mixins";
+
+.footer {
+  border-color: $blue;
+  border-style: solid;
+  border-width: 1px;
+  background-color: $gray;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+}
