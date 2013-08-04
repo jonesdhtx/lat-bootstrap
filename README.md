@@ -1,4 +1,4 @@
-# fe lat feedback
+# lat bootsrap
 
 An awesome requirejs app
 
