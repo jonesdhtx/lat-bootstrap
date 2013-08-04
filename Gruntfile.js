@@ -6,33 +6,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     clean: {
       files: ['dist']
-    },
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['components/requirejs/require.js', '<%= concat.dist.dest %>'],
-        dest: 'dist/require.js'
-      },
-    },
-    uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/require.min.js'
-      },
     },
     qunit: {
       files: ['test/unit/**/*.html']
@@ -75,7 +51,9 @@ module.exports = function(grunt) {
           // optimize: 'none',
           name: 'config',
           mainConfigFile: 'src/config.js',
-          out: 'dist/bootstrap.js'
+          out: 'dist/bootstrap.js',
+          almond: true,
+          wrap: true
         }
       }
     },
@@ -109,19 +87,17 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-requirejs');
 
   // Default task.
   grunt.registerTask('default', ['build']);
   grunt.registerTask('unit', ['jshint', 'sass:dev', 'qunit']);
-  grunt.registerTask('build', ['unit', 'clean', 'sass:dist', 'requirejs', 'concat', 'uglify']);
+  grunt.registerTask('build', ['unit', 'clean', 'sass:dist', 'requirejs']);
   grunt.registerTask('server', ['sass:dev', 'connect:development', 'watch:sass']);
   grunt.registerTask('preview', ['default', 'connect:production']);
 
