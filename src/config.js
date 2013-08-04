@@ -16,6 +16,7 @@ if(typeof(QUnit) != 'undefined') {
 }
 else {
   require(['main'], function(main) {
+    window.latitude = main;
     main.init();
   });
 }
