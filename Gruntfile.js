@@ -73,8 +73,8 @@ module.exports = function(grunt) {
       compile: {
         options: {
           // optimize: 'none',
-          name: 'main',
-          mainConfigFile: 'src/main.js',
+          name: 'config',
+          mainConfigFile: 'src/config.js',
           out: 'dist/bootstrap.js'
         }
       }

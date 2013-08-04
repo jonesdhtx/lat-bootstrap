@@ -1,0 +1,53 @@
+.nav { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; position: fixed; border-color: #197db6; border-style: solid; border-width: 1px; background-color: #f7ab33; color: #fff; top: 0px; left: 0px; right: 0px; padding: 10px; height: 40px; }
+
+.nav-spacer { height: 40px; width: 100%; }
+
+.footer { border-color: #197db6; border-style: solid; border-width: 1px; background-color: #a2b4b9; color: #fff; width: 100%; padding: 10px; }
+
+body { font-size: 16px; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0px 0 18px; color: #4f6369; text-align: left; font-weight: normal; font-family: inherit; font-family: "museo-slab", Georgia, "Times New Roman", Times, serif; line-height: 1.5em; text-rendering: optimizelegibility; }
+
+h1 { font-weight: bold; font-size: 2.25em; /* 36 */ font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif; line-height: 1.250em; }
+
+.primary-h1-2 { font-size: 1.625em; /* 26 */ }
+
+h2 { font-size: 1.5em; /* 24 */ }
+
+h3 { font-size: 1.250em; /* 20 */ padding-bottom: 6px; border-bottom: 1px dotted #c5d0d3; }
+
+h4 { font-size: 1.125em; /* 18 */ font-weight: bold; line-height: 1em; }
+
+p { margin: 0 0 18px 0; }
+
+.big { font-size: 2em; line-height: 1.333em; }
+
+p, li, dt, dd { line-height: 1.5em; }
+
+li, dt, dd { font-size: 1em; }
+
+small { color: #586e74; font-size: 85%; }
+
+strong { font-weight: bold; }
+
+em { font-style: italic; }
+
+cite { font-style: normal; }
+
+a { color: #197db6; text-decoration: none; }
+
+a:hover { color: #125880; }
+
+p a { cursor: pointer; }
+
+blockquote { margin: 0 0 20px; padding: 0 0 0 15px; border-left: 5px solid #eeeeee; }
+
+blockquote p { margin-bottom: 0; font-weight: 300; font-size: 16px; line-height: 25px; }
+
+blockquote small { display: block; color: #999999; line-height: 20px; }
+
+input, button, select, textarea { font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
+
+body { background: none repeat scroll 0 0 #c5d0d3; color: #4f6369; font-size: 16px; font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif; margin: 0; }
+
+.app { min-height: 400px; background-color: white; padding: 5px; }
