@@ -52,8 +52,8 @@ module.exports = function(grunt) {
           name: 'config',
           mainConfigFile: 'src/config.js',
           out: 'dist/bootstrap.js',
-          almond: true,
-          wrap: true
+          almond: true,  //Wrap as stand alone lib (so require not needed by consumer of this lib)
+          wrap: true     //Wraps in an anoymous scope (used w/ almond)
         }
       }
     },

@@ -11,10 +11,9 @@ define([
       nav.render('.nav');
       footer.render('.footer');
 
-      //TODO: show loading or something
       var waitForAppFunc = function() {
         if(window.latitudeApp) {
-          window.latitudeApp.init('.app');
+          window.latitudeApp.init('.app', window.latitudeData);
           //TODO: subsribe to events and what-not
         }
         else {
