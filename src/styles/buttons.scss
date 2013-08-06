@@ -1,0 +1,134 @@
+@import "colors";
+@import "mixins";
+
+.btn {
+  font-family: "ff-tisa-sans-web-pro",Helvetica,"Helvetica Neue",Arial,sans-serif;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 0px;
+  min-width: 14em;
+  height: 3.375em;
+  border: 0;
+  background-color: $btn_primary_bg;
+  @include border-radius(4px);
+  @include box-shadow(0px, -5px, 0px, 0px, $btn_primary_box);
+  color: $btn_primary_color;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.125em;
+  line-height: 3.375em;
+  cursor: pointer;
+  *zoom: 1;
+  *display: inline;
+  *margin-left: .3em;
+
+  span {
+    margin-left: 0.5em;
+    color: $btn_primary_inner_color;
+    text-transform: uppercase;
+    font-size: 0.777em;
+    line-height: normal;
+  }
+
+  &:hover,
+  &:active,
+  &.active {
+    background-color: $btn_primary_hover_bg;
+    color: white;
+    @include box-shadow(0px, -5px, 0px, 0px, $btn_primary_active_hover_box);
+  }
+
+  &:active,
+  &.active {
+    top: 1px;
+    @include box-shadow(0px, -3px, 0px, 0px, $btn_primary_active_box);
+  }
+
+  &.disabled, &[disabled] {
+    background-color: $btn_primary_disabled_bg;
+    color: $btn_primary_disabled_color;
+    @include box-shadow(0px, 0px, 0px, 0px, #fff);
+  }
+
+  &:first-child {
+    *margin-left: 0;
+  }
+
+  &.secondary {
+    background-color: $btn_secondary_bg;
+    color: $btn_secondary_color;
+    @include box-shadow(0px, -5px, 0px, 0px, $btn_secondary_box);
+
+    &:hover {
+      background-color: $btn_secondary_hover_bg;
+      color: $btn_secondary_hover_color;
+      @include box-shadow(0px, -5px, 0px, 0px, $btn_secondary_hover_box);
+    }
+
+    &:active {
+      @include box-shadow(0px, -3px, 0px, 0px, $btn_secondary_active_hover_box);
+    }
+  }
+
+  &.wide {
+    min-width: 320px;
+  }
+
+  &.nobold {
+    font-weight: normal;
+  }
+
+  &.small {
+    min-width: 145px;
+    height: 30px;
+//    background-color: $btn_small_bg;
+//    color: $btn_small_color;
+//    @include box-shadow(0px, -3px, 0px, 0px, $btn_small_box);
+    text-transform: uppercase;
+    font-size: 0.813em;
+    line-height: normal;
+
+    &:hover {
+//      background-color: $btn_small_hover_bg;
+//      color: $btn_small_hover_color;
+    }
+
+    &.active {
+//      background: $btn_small_active_bg;
+//      color: $btn_small_active_color;
+//      @include box-shadow(0px, 3px, 2px, 0px, $btn_small_active_box);
+    }
+  }
+
+  .block {
+    display: inline-block;
+    width: 100%;
+    *zoom: 1;
+    *display: inline;
+  }
+
+  + a.secondary.block {
+    margin-top: 42px;
+    margin-bottom: -12px;
+    margin-left: 0;
+  }
+
+  &.gray {
+        background-color: $btn_small_bg;
+        color: $btn_small_color;
+        @include box-shadow(0px, -3px, 0px, 0px, $btn_small_box);
+
+        &:hover {
+          background-color: $btn_small_hover_bg;
+          color: $btn_small_hover_color;
+        }
+
+        &.active {
+          background: $btn_small_active_bg;
+          color: $btn_small_active_color;
+          @include box-shadow(0px, 3px, 2px, 0px, $btn_small_active_box);
+        }
+  }
+}

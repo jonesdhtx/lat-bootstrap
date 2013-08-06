@@ -32,7 +32,9 @@ define([
         if(window.latitudeApp) {
           app = window.latitudeApp;
           app.start('.lat-app', window.latitudeAppData);
-          //TODO: subsribe to events and what-not
+          app.subscribe('hey-dj', function() {
+            console.log('GOT hey-dj !!!');
+          });
         }
         else {
           setTimeout(waitForAppFunc, 50);

@@ -186,6 +186,24 @@ blockquote small { display: block; color: #999999; line-height: 20px; }
 
 input, button, select, textarea { font-family: "ff-tisa-sans-web-pro", Helvetica, "Helvetica Neue", Arial, sans-serif; }
 
+.btn { font-family: "ff-tisa-sans-web-pro",Helvetica,"Helvetica Neue",Arial,sans-serif; position: relative; display: inline-block; margin-bottom: 12px; padding: 0px; min-width: 14em; height: 3.375em; border: 0; background-color: #f7ab33; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0px -5px 0px 0px #d58e24; -moz-box-shadow: inset 0px -5px 0px 0px #d58e24; box-shadow: inset 0px -5px 0px 0px #d58e24; color: white; vertical-align: middle; text-align: center; font-weight: bold; font-size: 1.125em; line-height: 3.375em; cursor: pointer; *zoom: 1; *display: inline; *margin-left: .3em; }
+.btn span { margin-left: 0.5em; color: #9d6307; text-transform: uppercase; font-size: 0.777em; line-height: normal; }
+.btn:hover, .btn:active, .btn.active { background-color: #f6a11a; color: white; -webkit-box-shadow: inset 0px -5px 0px 0px #d58608; -moz-box-shadow: inset 0px -5px 0px 0px #d58608; box-shadow: inset 0px -5px 0px 0px #d58608; }
+.btn:active, .btn.active { top: 1px; -webkit-box-shadow: inset 0px -3px 0px 0px #d58e24; -moz-box-shadow: inset 0px -3px 0px 0px #d58e24; box-shadow: inset 0px -3px 0px 0px #d58e24; }
+.btn.disabled, .btn[disabled] { background-color: #f7bf66; color: #ffecce; -webkit-box-shadow: inset 0px 0px 0px 0px white; -moz-box-shadow: inset 0px 0px 0px 0px white; box-shadow: inset 0px 0px 0px 0px white; }
+.btn:first-child { *margin-left: 0; }
+.btn.secondary { background-color: #b9c7ca; color: #586e74; -webkit-box-shadow: inset 0px -5px 0px 0px #96aab0; -moz-box-shadow: inset 0px -5px 0px 0px #96aab0; box-shadow: inset 0px -5px 0px 0px #96aab0; }
+.btn.secondary:hover { background-color: #aabbbf; color: #4f6369; -webkit-box-shadow: inset 0px -5px 0px 0px #8ba1a7; -moz-box-shadow: inset 0px -5px 0px 0px #8ba1a7; box-shadow: inset 0px -5px 0px 0px #8ba1a7; }
+.btn.secondary:active { -webkit-box-shadow: inset 0px -3px 0px 0px #96aab0; -moz-box-shadow: inset 0px -3px 0px 0px #96aab0; box-shadow: inset 0px -3px 0px 0px #96aab0; }
+.btn.wide { min-width: 320px; }
+.btn.nobold { font-weight: normal; }
+.btn.small { min-width: 145px; height: 30px; text-transform: uppercase; font-size: 0.813em; line-height: normal; }
+.btn .block { display: inline-block; width: 100%; *zoom: 1; *display: inline; }
+.btn + a.secondary.block { margin-top: 42px; margin-bottom: -12px; margin-left: 0; }
+.btn.gray { background-color: #b9c7ca; color: #738e96; -webkit-box-shadow: inset 0px -3px 0px 0px #96aab0; -moz-box-shadow: inset 0px -3px 0px 0px #96aab0; box-shadow: inset 0px -3px 0px 0px #96aab0; }
+.btn.gray:hover { background-color: #aabbbf; color: #3d4d51; }
+.btn.gray.active { background: #607980; color: #e8eced; -webkit-box-shadow: inset 0px 3px 2px 0px #586e74; -moz-box-shadow: inset 0px 3px 2px 0px #586e74; box-shadow: inset 0px 3px 2px 0px #586e74; }
+
 .lat-nav { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; position: fixed; border-color: #197db6; border-style: solid; border-width: 1px; background-color: #f7ab33; color: #fff; top: 0px; left: 0px; right: 0px; padding: 10px; height: 40px; }
 
 .lat-nav-spacer { height: 40px; width: 100%; }

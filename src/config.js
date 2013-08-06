@@ -5,7 +5,8 @@ require.config({
     "tpl": "../components/requirejs-text/index",
     "unit": "../test/unit",
     "dist": "../dist",
-    "components": "../components"
+    "components": "../components",
+    "lat-mixins": "../components/lat-mixins/dist"
   }
 });
 
@@ -15,9 +16,11 @@ if(typeof(QUnit) != 'undefined') {
   });
 }
 else {
-  require(['main'], function(main) {
-    window.latitude = main;
-    main.init();
+  require(['jquery', 'main'], function($, main) {
+    $(function() {
+      //Initialize after doc ready
+      main.init();
+    });
   });
 }
 
