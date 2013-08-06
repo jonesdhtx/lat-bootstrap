@@ -8,7 +8,7 @@ define([
 
   test('Rendering', 1, function() {
     main.init('#qunit-fixture');
-    equal($('.nav').length, 1, 'Should render nav');
+    equal($('.lat-nav').length, 1, 'Should render nav');
   });
 
 });

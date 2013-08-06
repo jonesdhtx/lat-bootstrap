@@ -1,0 +1,137 @@
+.container {
+  margin: 0 auto;
+  clear: both;
+  zoom: 1;
+  width: 1000px;
+}
+
+/* Rows contain grid blocks. */
+.row {
+  margin-bottom: 12px;
+  width: 100%;
+  *zoom: 1;
+}
+
+.row:before, .row:after {
+  display: table;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+.row:first-child {
+  margin-top: 0;
+}
+
+/*Grid blocks*/
+.row [class*="grid_"] {
+  display: block;
+  float: left;
+  min-height: 30px;
+  margin-left: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.row [class*="grid_"]:first-child {
+  margin-left: 0;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12,
+.grid_9_2,
+.grid_9_4,
+.grid_8_3 {
+  display: inline;
+  float: left;
+}
+
+.first {
+  margin-left: 0!important;
+}
+
+.last {
+  margin-right: 0!important;
+}
+
+.grid_1 {
+  width: 65px;
+}
+
+.grid_2 {
+  width: 150px;
+}
+
+.grid_3 {
+  width: 235px;
+}
+
+.grid_4 {
+  width: 320px;
+}
+
+.grid_5 {
+  width: 405px;
+}
+
+.grid_6 {
+  width: 490px;
+}
+
+.grid_7 {
+  width: 575px;
+}
+
+.grid_8 {
+  width: 660px;
+}
+
+.grid_8_3 {
+  width: 206.5px;
+  /* 3 cols inside a 8 col grid */
+}
+
+.grid_9 {
+  width: 745px;
+}
+
+.grid_9_2 {
+  width: 362.5px;
+  /* 2 cols inside a 9 col grid */
+}
+
+.grid_9_4 {
+  width: 171.2px;
+  /* 4 cols inside a 9 col grid */
+}
+
+.grid_10 {
+  width: 830px;
+}
+
+.grid_11 {
+  width: 915px;
+}
+
+.grid_12 {
+  margin: 0;
+  width: 1000px;
+}
+
+.row.content-center, .row [class*="grid_"].content-center {
+  float: none;
+  margin: 0 auto !important;
+}

@@ -4,8 +4,8 @@ define([
   'tpl!templates/footer.tpl'
 ], function($, _, footerTemplate) {
   return {
-    render: function(target) {
-      $(target).html(_.template(footerTemplate, { msg: 'yea'}));
+    render: function() {
+      $('.lat-app').after(_.template(footerTemplate, { msg: 'yea'}));
     }
   };
 });

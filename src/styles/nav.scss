@@ -3,7 +3,7 @@
 
 $nav-height: 40px;
 
-.nav {
+.lat-nav {
   @include box-sizing(border-box);
   position: fixed;
   border-color: $blue;
@@ -18,7 +18,7 @@ $nav-height: 40px;
   height: $nav-height;
 }
 
-.nav-spacer {
+.lat-nav-spacer {
   height: $nav-height;
   width: 100%;
 }
