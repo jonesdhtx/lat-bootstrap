@@ -42,7 +42,25 @@ module.exports = function(grunt) {
           'components/lat-mixins/dist/styles/*.scss',
           'src/styles/*.scss'
         ],
-        tasks: ['sass:dev'],
+        tasks: ['sass:dev', 'imageEmbed:dev'],
+      }
+    },
+    imageEmbed: {
+      dev: {
+        src: [ 'test/styles/bootstrap.css' ],
+        dest: 'test/styles/bootstrap.css',
+        options: {
+          deleteAfterEncoding : false,
+          baseDir: 'src/images'
+        }
+      },
+      dist: {
+        src: [ 'dist/bootstrap.css' ],
+        dest: 'dist/bootstrap.css',
+        options: {
+          deleteAfterEncoding : false,
+          baseDir: 'src/images'
+        }
       }
     },
     requirejs: {
@@ -93,12 +111,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-requirejs');
+  grunt.loadNpmTasks("grunt-image-embed");
 
   // Default task.
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('unit', ['jshint', 'sass:dev', 'qunit']);
-  grunt.registerTask('build', ['unit', 'clean', 'sass:dist', 'requirejs']);
-  grunt.registerTask('server', ['sass:dev', 'connect:development', 'watch:sass']);
+  grunt.registerTask('unit', ['jshint', 'sass:dev', 'imageEmbed:dev', 'qunit']);
+  grunt.registerTask('build', ['unit', 'clean', 'sass:dist', 'imageEmbed:dist', 'requirejs']);
+  grunt.registerTask('server', ['sass:dev', 'imageEmbed:dev', 'connect:development', 'watch:sass']);
   grunt.registerTask('preview', ['default', 'connect:production']);
 
 };
